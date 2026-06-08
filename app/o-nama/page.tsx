@@ -49,7 +49,7 @@ export default function OnamaPage() {
     <main className="bg-[#FAFAF7] min-h-screen">
 
       {/* HERO */}
-      <section className="max-w-7xl mx-auto px-6 pt-20 pb-12">
+      <section className="max-w-7xl mx-auto px-6 pt-4 sm:pt-20 pb-12">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#222222]">
           O <span className="text-[#7E8D67]">nama</span>
         </h1>

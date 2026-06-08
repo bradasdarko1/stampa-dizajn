@@ -95,7 +95,7 @@ export default function Header() {
       </nav>
 
       {/* Spacer da sadržaj ne ide ispod bottom nav-a */}
-      <div className="lg:hidden h-16" />
+      
 
       {modalOpen && <MiniModal onClose={() => setModalOpen(false)} />}
     </>

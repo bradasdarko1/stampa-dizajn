@@ -43,7 +43,7 @@ export default function Home() {
     <main className="bg-[#FAFAF7] min-h-screen">
 
       {/* PROMO BANNER */}
-      <section className="max-w-7xl mx-auto px-5 sm:px-6 pt-4 sm:pt-6">
+      <section className="max-w-7xl mx-auto px-5 sm:px-6 pt-0 sm:pt-6">
         <Link href="/stampa/flajeri?order=1">
           <div className="group relative overflow-hidden rounded-2xl sm:rounded-3xl cursor-pointer hover:scale-[1.01] transition-transform duration-300">
 

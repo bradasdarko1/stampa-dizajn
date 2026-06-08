@@ -68,7 +68,7 @@ export default function DizajnPage() {
     <main className="bg-[#FAFAF7] min-h-screen">
 
       {/* HERO */}
-      <section className="max-w-7xl mx-auto px-6 pt-20 pb-16">
+      <section className="max-w-7xl mx-auto px-6 pt-4 sm:pt-20 pb-16">
         <span className="inline-block bg-[#7E8D67]/10 text-[#7E8D67] px-4 py-2 rounded-full text-sm font-semibold">
           DIZAJN & WEB DIZAJN
         </span>

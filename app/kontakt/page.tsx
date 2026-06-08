@@ -5,7 +5,7 @@ export default function KontaktPage() {
     <main className="bg-[#FAFAF7] min-h-screen">
 
       {/* HEADER */}
-      <section className="max-w-7xl mx-auto px-6 pt-20 pb-10">
+      <section className="max-w-7xl mx-auto px-6 pt-4 sm:pt-20 pb-10">
         <h1 className="text-4xl sm:text-5xl font-bold text-[#222222]">
           Kontakt <span className="text-[#7E8D67]">informacije</span>
         </h1>
