@@ -5,6 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(req: Request) {
   try {
+    console.log('RESEND_API_KEY length:', process.env.RESEND_API_KEY?.length)
     const body = await req.json()
     const { usluga, ime, kontakt, mejl, adresa, firma, pib, kolicina, format, strana, napomena, fajlovi } = body
 
