@@ -3,6 +3,9 @@ import nodemailer from 'nodemailer'
 
 export async function POST(req: Request) {
   try {
+    console.log('EMAIL_USER:', process.env.EMAIL_USER)
+  console.log('EMAIL_PASS length:', process.env.EMAIL_PASS?.length)
+  console.log('EMAIL_PASS value:', process.env.EMAIL_PASS)
     const body = await req.json()
     const { usluga, ime, kontakt, mejl, adresa, firma, pib, format, strana, kolicina, napomena, fajlovi } = body
 
