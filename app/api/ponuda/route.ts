@@ -6,6 +6,7 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 export async function POST(req: Request) {
   try {
     console.log('RESEND_API_KEY length:', process.env.RESEND_API_KEY?.length)
+
     const body = await req.json()
     const { usluga, ime, kontakt, mejl, adresa, firma, pib, kolicina, format, strana, napomena, fajlovi } = body
 
@@ -15,7 +16,7 @@ export async function POST(req: Request) {
       contentType: f.type,
     }))
 
-    await resend.emails.send({
+    const result = await resend.emails.send({
       from: 'Web porudzbina <onboarding@resend.dev>',
       to: process.env.EMAIL_TO || process.env.EMAIL_USER || '',
       subject: `Nova ponuda: ${usluga} — ${ime}`,
@@ -77,6 +78,8 @@ export async function POST(req: Request) {
         </div>
       `,
     })
+
+    console.log('RESEND RESULT:', JSON.stringify(result))
 
     return NextResponse.json({ success: true })
   } catch (error) {
