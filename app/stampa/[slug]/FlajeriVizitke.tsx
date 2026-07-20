@@ -8,6 +8,7 @@ type Service = {
   slug: string
   img: string
   desc: string
+  h1?: string
   details: string[]
   popular?: boolean
   specs?: { label: string; value: string }[]
@@ -154,7 +155,7 @@ export default function FlajeriVizitke({ service, autoOrder }: { service: Servic
               {service.popular && (
                 <span className="inline-block bg-red-600 text-white text-xs px-3 py-1 rounded-md mb-3 font-semibold">NAJPRODAVANIJE</span>
               )}
-              <h1 className="text-3xl sm:text-4xl font-bold text-[#222222]">{service.title}</h1>
+              <h1 className="text-3xl sm:text-4xl font-bold text-[#222222]">{service.h1 ?? service.title}</h1>
               <p className="text-gray-600 mt-3 text-sm sm:text-base leading-relaxed">{service.desc}</p>
             </div>
             {service.specs && (

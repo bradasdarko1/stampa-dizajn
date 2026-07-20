@@ -8,6 +8,7 @@ type Service = {
   slug: string
   img: string
   desc: string
+  h1?: string // ← SEO: prošireni H1 naslov sa ključnom reči
   details: string[]
   popular?: boolean
 }
@@ -497,7 +498,7 @@ export default function OstaleUsluge({ service }: { service: Service }) {
       <section className="max-w-7xl mx-auto px-5 sm:px-6 py-6 sm:py-12">
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-start">
           <div className="w-full lg:w-1/2 rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg flex-shrink-0">
-            <img src={service.img} alt={service.title}
+            <img src={service.img} alt={service.h1 ?? service.title}
               className="w-full h-[220px] sm:h-[340px] lg:h-[420px] object-cover" />
           </div>
           <div className="w-full lg:w-1/2 flex flex-col gap-5">
@@ -505,7 +506,8 @@ export default function OstaleUsluge({ service }: { service: Service }) {
               {service.popular && (
                 <span className="inline-block bg-red-600 text-white text-xs px-3 py-1 rounded-md mb-3 font-semibold">NAJPRODAVANIJE</span>
               )}
-              <h1 className="text-3xl sm:text-4xl font-bold text-[#222222]">{service.title}</h1>
+              {/* SEO: prošireni H1 sa ključnom reči, fallback na title */}
+              <h1 className="text-3xl sm:text-4xl font-bold text-[#222222]">{service.h1 ?? service.title}</h1>
               <p className="text-gray-600 mt-3 text-sm sm:text-base leading-relaxed">{service.desc}</p>
             </div>
             <div className="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-gray-100">

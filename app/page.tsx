@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
+import LocalBusinessSchema from '@/components/LocalBusinessSchema'
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false)
@@ -41,6 +42,7 @@ export default function Home() {
 
   return (
     <main className="bg-[#FAFAF7] min-h-screen">
+      <LocalBusinessSchema />
 
       {/* PROMO BANNER */}
       <section className="max-w-7xl mx-auto px-5 sm:px-6 pt-0 sm:pt-6">
