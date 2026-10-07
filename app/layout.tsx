@@ -14,9 +14,7 @@ export const metadata: Metadata = {
   },
   description:
     'Profesionalna štampa i grafički dizajn u Novom Sadu. Flajeri, vizit karte, plakati, brošure i reklamni materijal. Zatražite ponudu već danas.',
-  alternates: {
-    canonical: '/', // canonical za početnu; podstranice definišu svoj
-  },
+  
   openGraph: {
     type: 'website',
     locale: 'sr_RS',
